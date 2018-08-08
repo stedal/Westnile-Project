@@ -53,10 +53,4 @@ p1.add_tools(HoverTool(
      ("Total", "@counts")
     ]))
 
-# hover.tooltips = [
-#     ("index", "$index"),
-#     ("(x,y)", "($x, $y)")]
-
-show(p1)
-
 curdoc().add_root(column(p1))
