@@ -13,8 +13,8 @@ from bokeh.plotting import figure
 from bokeh.transform import factor_cmap
 from bokeh.models import HoverTool
 
-train = pd.read_csv('heroku/data/combined_train.csv')
-test = pd.read_csv('heroku/data/combined_test.csv')
+train = pd.read_csv('/data/combined_train.csv')
+test = pd.read_csv('/data/combined_test.csv')
 #spray = pd.read_csv('assets/input/spray.csv')
 
 x_var = ['Negative', 'Positive'] #train['WnvPresent'].value_counts(normalize = False).index
