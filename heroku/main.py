@@ -49,10 +49,9 @@ p1.vbar(source = source,
 p1.title.align = 'center'
 p1.add_tools(HoverTool(
     tooltips=[
-        ("index", "$index"),
-     ("(x,y)", "($labels, $counts)")
-    ])
-           )
+        ("Label", "$index"),
+     ("Total", "@counts")
+    ]))
 
 # hover.tooltips = [
 #     ("index", "$index"),
