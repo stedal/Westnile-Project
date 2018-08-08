@@ -51,4 +51,4 @@ p1.add_tools(HoverTool(
 
 show(p1)
 
-curdoc().add_root(p1)
+curdoc().add_root(column(p1))
