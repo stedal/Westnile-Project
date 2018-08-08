@@ -9,8 +9,10 @@ from bokeh.io import curdoc,show
 from bokeh.layouts import row,column, widgetbox
 from bokeh.plotting import figure
 from bokeh.io import output_notebook, show
-from bokeh.models import ColumnDataSource
+from bokeh.models import ColumnDataSource, HoverTool
 from bokeh.embed import components
+from bokeh.transform import factor_cmap
+
 
 import numpy as np
 
