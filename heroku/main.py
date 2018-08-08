@@ -53,4 +53,11 @@ p1.add_tools(HoverTool(
      ("Total", "@counts")
     ]))
 
-curdoc().add_root(column(p1))
+p2 = figure(title = "Average Temperature Aggregate", tools = 'save',
+           background_fill_color = '#deebf7')
+
+hist, edges = np.histogram(train['Tavg'], density = False, bins = 20)
+
+p2.quad(top = hist, bottom = 0, left = edges[:-1], right =edges[1:], fill_color = '#6baed6', line_color = '#084594')
+
+curdoc().add_root(column(p1, p2))
