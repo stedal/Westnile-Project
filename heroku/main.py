@@ -7,18 +7,14 @@ from bokeh.io import curdoc,show
 from bokeh.layouts import row,column, widgetbox
 from bokeh.plotting import figure
 from bokeh.io import output_notebook, show
-from bokeh.models import ColumnDataSource, HoverTool
-from bokeh.embed import components
+from bokeh.models import ColumnDataSource, HoverTool, Plot
+from bokeh.embed import components, file_html
 from bokeh.transform import factor_cmap
-
-
-import numpy as np
-
-from bokeh.models import Plot
-from bokeh.plotting import figure
+from bokeh.models.widgets import Panel, Tabs
 from bokeh.resources import CDN
-from bokeh.embed import file_html
 from bokeh.palettes import Spectral6
+
+
 
 train = pd.read_csv('heroku/data/combined_train.csv')
 test = pd.read_csv('heroku/data/combined_test.csv')
