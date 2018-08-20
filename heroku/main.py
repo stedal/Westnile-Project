@@ -63,7 +63,7 @@ source4 = ColumnDataSource(data = data4)
 source5 = ColumnDataSource(data = data5)
 source6 = ColumnDataSource(data = data6)
 
-p3 = figure(title = 'Average Temperature (2007)', x_axis_type="datetime", plot_height = 600, plot_width = 800)
+p3 = figure(title = 'Average Temperature (2007)', x_axis_type="datetime", plot_height = 600, plot_width = 600)
 p3.circle('date2007' ,'temperature2007', source = source3)
 p3.title.align = 'center'
 p3.title.text_font_size = '16pt'
@@ -73,7 +73,7 @@ p3.add_tools(HoverTool(
      ("Temp", "@temperature2007")
     ]))
 
-p4 = figure(title = 'Average Temperature (2009)', x_axis_type="datetime", plot_height = 600, plot_width = 800)
+p4 = figure(title = 'Average Temperature (2009)', x_axis_type="datetime", plot_height = 600, plot_width = 600)
 p4.circle('date2009' ,'temperature2009', source = source4)
 p4.title.align = 'center'
 p4.title.text_font_size = '16pt'
@@ -83,7 +83,7 @@ p4.add_tools(HoverTool(
      ("Temp", "@temperature2009")
     ]))
 
-p5 = figure(title = 'Average Temperature (2011)', x_axis_type="datetime", plot_height = 600, plot_width = 800)
+p5 = figure(title = 'Average Temperature (2011)', x_axis_type="datetime", plot_height = 600, plot_width = 600)
 p5.circle('date2011' ,'temperature2011', source = source5)
 p5.title.align = 'center'
 p5.title.text_font_size = '16pt'
@@ -93,7 +93,7 @@ p5.add_tools(HoverTool(
      ("Temp", "@temperature2011")
     ]))
 
-p6 = figure(title = 'Average Temperature (2013)', x_axis_type="datetime", plot_height = 600, plot_width = 800)
+p6 = figure(title = 'Average Temperature (2013)', x_axis_type="datetime", plot_height = 600, plot_width = 600)
 p6.circle('date2013' ,'temperature2013', source = source6)
 p6.title.align = 'center'
 p6.title.text_font_size = '16pt'
