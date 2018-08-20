@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 
-##Interactive bokeh for cross location selection
 
-## Updated with regression line on 29 Apr 18
 import numpy as np
 import pandas as pd
 from bokeh.io import curdoc,show
@@ -25,6 +23,14 @@ from bokeh.palettes import Spectral6
 train = pd.read_csv('heroku/data/combined_train.csv')
 test = pd.read_csv('heroku/data/combined_test.csv')
 #spray = pd.read_csv('assets/input/spray.csv')
+
+train['Year'] = train['Date'].apply(lambda x: x[:4])
+train['Month'] = train['Date'].apply(lambda x: x[5:7])
+train['Day'] = train['Date'].apply(lambda x: x[8:])
+
+test['Year'] = test['Date'].apply(lambda x: x[:4])
+test['Month'] = test['Date'].apply(lambda x: x[5:7])
+test['Day'] = test['Date'].apply(lambda x: x[8:])
 
 def datetime(x):
     return np.array(x, dtype=np.datetime64)
@@ -50,11 +56,11 @@ data4 = {
 }
 data5 = {
         'temperature2011': y2011,
-        'date2011': x2011    
+        'date2011': x2011
 }
 data6 = {
         'temperature2013': y2013,
-        'date2013': x2013   
+        'date2013': x2013
 }
 source3 = ColumnDataSource(data = data3)
 source4 = ColumnDataSource(data = data4)
