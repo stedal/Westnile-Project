@@ -25,6 +25,10 @@ from bokeh.palettes import Spectral6
 train = pd.read_csv('heroku/data/combined_train.csv')
 test = pd.read_csv('heroku/data/combined_test.csv')
 #spray = pd.read_csv('assets/input/spray.csv')
+
+def datetime(x):
+    return np.array(x, dtype=np.datetime64)
+
 x2007 = datetime(list(train[train['Year'] == '2007']['Date']))
 y2007 = list(train[train['Year'] == '2007']['Tavg'])
 x2009 = datetime(list(train[train['Year'] == '2009']['Date']))
