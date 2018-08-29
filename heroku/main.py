@@ -63,7 +63,7 @@ source4 = ColumnDataSource(data = data4)
 source5 = ColumnDataSource(data = data5)
 source6 = ColumnDataSource(data = data6)
 
-p3 = figure(title = 'Average Temperature (2007)', x_axis_type="datetime", plot_height = 600, plot_width = 600)
+p3 = figure(title = 'Average Temperature (2007)', x_axis_type="datetime", plot_height = 725, plot_width = 725)
 p3.circle('date2007' ,'temperature2007', source = source3)
 p3.title.align = 'center'
 p3.title.text_font_size = '16pt'
